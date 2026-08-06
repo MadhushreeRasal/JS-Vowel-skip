@@ -8,7 +8,7 @@ https://madhushreerasal.github.io/JS-Vowel-skip/
 
 ## Preview
 
-![JS Vowel Skip Preview](images/preview.png)
+![JS Vowel Skip Preview](preview.png)
 
 ## Features
 
