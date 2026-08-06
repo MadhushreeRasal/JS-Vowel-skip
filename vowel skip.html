@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		
+		<title>vowels skip - while loop</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			*{
+				margin:0;
+			}
+			body{
+				background-color:#fffff0;
+				text-align:center;
+			}
+			main{
+				height:65vh;																							
+				padding:5vw;
+				font-size:19px;
+			}
+			header, footer{
+				background-color:#CCCCFF;
+				padding:10px;
+			}
+			header{
+				border-bottom:2px solid black;
+			}
+			footer{
+				border-top:2px solid black;
+			}
+			button{
+				padding:8px 30px;
+				border-radius:10px;
+				letter-spacing:2px;
+				color:#CCCCFF;
+				font-size:18px;
+				background-color:black;
+			}
+			input{
+				padding:8px 30px;
+			}
+			#output{
+				letter-spacing:2px;
+				font-size:22px;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Vowel Skip</h1>
+		</header>
+		<main>
+			<label for="txt">Enter Text :</label>
+			<input type="text" placeholder="Add text here..." required name="txt" id="txt"><br><br>
+			<button onclick="result()">Show text without vowels</button>
+			<br><br>
+			<p id="output">Output</p>
+			<script>
+				
+				function result(){
+					// variable declaration
+					let a=document.getElementById("txt").value;
+					let b ="";
+					let c="aeiouAEIOU";
+					let i=0;
+					//loop to check input character by character
+					while(i<a.length){
+						let vowel=false;
+						//check for vowels
+						let j=0;
+						while(j<c.length){
+							if(a[i] == c[j]){
+								vowel = true;
+								break;
+							}
+							j++;
+						}
+						//if a consonant add to the string to be printed later
+						if(vowel==false){
+							b = b + a[i];
+						}
+						i++;
+					}
+					//print string
+					document.getElementById('output').innerHTML=b;
+					console.log(b);
+				}
+			</script>
+		</main>
+		<footer>
+		&copy StressBuddy - 2026. All rights reserved.
+		</footer>
+	</body>
+</html>
